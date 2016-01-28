@@ -6,15 +6,15 @@ Esse é um documento LaTeX básico em Português-Brasil já configurado e que j�
 
 Para utilizar LaTeX são necessários um compilador TeX/LaTeX e opcionalmente um editor de texto que facilitará na digitação.
 
-Compilador: [Mixtex](http://miktex.org/download)
+**Compilador:** [Mixtex](http://miktex.org/download)
 
-Editor (opcional, mas recomendado): [TexMaker](http://www.xm1math.net/texmaker/download.html)
+**Editor (opcional, mas recomendado):** [TexMaker](http://www.xm1math.net/texmaker/download.html)
 
 ## Configuração do TexMaker
 
-Para facilitar a visualização dos arquivos, vá até Comandos marque a opção "Use a "build" subdirectory for output files" e substitua o texto no campo Bib(La)Tex por:
+Para facilitar a visualização dos arquivos, vá até Comandos marque a opção **"Use a "build" subdirectory for output files"** e substitua o texto no campo Bib(La)Tex por:
 
-> bibtex build/%.aux
+> `bibtex build/%.aux`
 
 Na área Compilar escolha compilação rápida como sendo:
  
@@ -22,7 +22,7 @@ Na área Compilar escolha compilação rápida como sendo:
 
 Copie o dicionário incluso na pasta TexMaker para 
 
-> C:/Program Files (x86)/Texmaker/
+> `C:/Program Files (x86)/Texmaker/`
 
 e selecione como dicionário na parte Editor.
  
