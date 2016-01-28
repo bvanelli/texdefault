@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+
+% Fonte em portgues brasileiro
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%%%%%%%%%%Packages opcionais%%%%%%%%%%%%%%
+
+% Tabelas
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}     
+
+% Identação e espaçamento
+\usepackage{fullpage}      % Autoscale da página
+\usepackage{indentfirst}   % Identar parágrafo em cada quebra de linha
+
+% Figuras
+\usepackage{graphicx}      % Pictures
+
+
+\begin{document}
+
+
+%---------------------------------------------------
+%Começo da capa
+\begin{center}
+\thispagestyle{empty}
+\includegraphics[width=0.2\linewidth]{logo.png} \\[0.3cm]
+\textsc{\LARGE Universidade Extraterrestre}\\[1.5cm]
+
+\textsc{\large A arte da Vagabundagem}\\[0.5cm]
+% Título
+\hrule \vspace{0.4cm}
+{ \huge \bfseries Trabalho  \\[0.4cm] }
+\hrule \vspace{1.5cm}
+\vspace{1cm} % Valor opcional, pode ser definido para alterar a altura dos nomes na página
+
+% Autores e professor
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft} \large
+% Nomes dos alunos
+\emph{Alunos:}\\
+Fulano \\
+Ciclano
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Professor:} \\
+Beltrano
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Fim da capa
+{\large Cidade \\[0.4cm] Janeiro de 2016}
+
+\end{center}
+% Fim da capa
+%---------------------------------------------------
+
+\newpage
+% Gerar sumário. É necessário mais de uma compilação para ser gerado completamente.
+\tableofcontents
+\newpage
+
+\section{Introdução}
+
+In suam ille illa quia fiat ut etsi. Actu inde tius du to ii. Percipitur ha me virtutibus afferuntur ii ob. Actum utrum ob ha intra. Primis hic sentio saltem nam caelum volens. Ob caeteras to ad si credatur differre efficiat reperiri. 
+
+Judicem jam requiri incumbo vos. Secius qualis imo totius pendeo vix deinde. Eo de hinc in utor in hinc nunc ausi. Hos quo patet cur illae ope illum tanti. Ac scribere obtinent co ea creandam ex. Et obstinate ut et obdormiam tractatur. 
+
+Rantem necdum cumque una cap eamque sum vitiis. Hos heri ipsi novi est hoc aspi cum. Rom nul potuit non fueram animam. Sanguinem faciendam sua sum deleantur objectiva remanetne sed cunctatus. Opiniones examinare aggrediar naturales dat desumptas dem. Durent vacabo eo negans de paucos ex. Pudeat ha in attigi putare ad de. 
+
+\section{Desenvolvimento}
+
+\subsection{Quodammodo}
+
+Ea statuendum ut hauriantur percipitur du. Ita illamque vix noluisse habentem uti cum. Videam ut coelum im parvus essent accepi multae. Utiles eo vi summam si alicui easdem ex errore. Apprehendo affectibus rem excogitent aut intelligat cap deveniatur cui. Rectum ita qua realem primum lus parvus. Quis iii visa suam luce pla. \cite{lol}
+
+Scopo ita quasi jaceo cui habeo. Quarundam ii ingressus praesenti corporeas et expendere ex gi. Duo simul visus nempe rem. Rea judiciis cognosco existens refertur ens probanda iis culpandi. Credendam eminenter contineat im productus to. Illasque tes ita compages timerent una generali. Communi id alienas du effugio. Ima atheorum imaginem singulas rem perpauca invenire rom qua. Uno imo constanter intellectu eae defectibus lus. 
+
+\subsection{Habeam}
+
+Infixa ac de mellis at humana in. Momentis sequitur eas sua ulterius probatur cum. Quaeque poterit vim cognitu via possunt qua. Tam colligere nia principia praecipue pergamque stabilire fictitium. 
+
+\subsubsection{Leone}
+
+Lucem ii operi edita leone porro novum ab. Hae quavis hic tam essent quidam altius multis tum. 
+
+\subsection{Experirer}
+
+Ha faciendam persuadeo tollentur ac si experirer expendere concipiam. Nudam istis cui majus vapor verba omnes usu vox eos. Falso cum scire porro edita firma istae ita hac. Bitavi si quorum figura eo ei. Hoc sitas inter rerum jam sua tum. Extitisse tot opiniones ens spectatum vos nonnullae. Longe ii ha utens fidam is primo magna ad.
+
+
+
+\newpage
+
+% Gerar bibliografia
+% É necessário a compilação PdfLatex > BibTex > PdfLatex > PdfLatex, já que o arquivo bibliography é compilado separadamente.
+\bibliography{bibliography}
+\bibliographystyle{plain}
+
+
+
+\end{document}
