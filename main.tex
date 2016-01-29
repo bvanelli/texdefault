@@ -21,6 +21,9 @@
 \usepackage{graphicx}      % Pictures
 \graphicspath{{./logo/}{./figuras/}} % Pastas para procurar imagens
 
+% URLs na bibliografia
+\usepackage{url}
+
 \begin{document}
 
 
@@ -63,48 +66,118 @@ Beltrano
 % Fim da capa
 %---------------------------------------------------
 
+
+
+%---------------------------------------------------
+%Começo do Sumário
 \newpage
 % Gerar sumário. É necessário mais de uma compilação para ser gerado completamente.
 \tableofcontents
 \newpage
+% Fim do sumário
+%---------------------------------------------------
+
 
 \section{Introdução}
 
-In suam ille illa quia fiat ut etsi. Actu inde tius du to ii. Percipitur ha me virtutibus afferuntur ii ob. Actum utrum ob ha intra. Primis hic sentio saltem nam caelum volens. Ob caeteras to ad si credatur differre efficiat reperiri. 
+Esse é um arquivo base de introdução ao LaTeX. Alguns exemplos podem ser encontrados nesse texto, como por exemplo:
+\\
 
-Judicem jam requiri incumbo vos. Secius qualis imo totius pendeo vix deinde. Eo de hinc in utor in hinc nunc ausi. Hos quo patet cur illae ope illum tanti. Ac scribere obtinent co ea creandam ex. Et obstinate ut et obdormiam tractatur. 
+\textbf{Esse texto está em negrito.}
 
-Rantem necdum cumque una cap eamque sum vitiis. Hos heri ipsi novi est hoc aspi cum. Rom nul potuit non fueram animam. Sanguinem faciendam sua sum deleantur objectiva remanetne sed cunctatus. Opiniones examinare aggrediar naturales dat desumptas dem. Durent vacabo eo negans de paucos ex. Pudeat ha in attigi putare ad de. 
+\textit{Esse texto está em itálico.}
+
+``Este texto está entre aspas''
+
 
 \section{Desenvolvimento}
 
-\subsection{Quodammodo}
+\subsection{Adicionando imagens}
 
-Ea statuendum ut hauriantur percipitur du. Ita illamque vix noluisse habentem uti cum. Videam ut coelum im parvus essent accepi multae. Utiles eo vi summam si alicui easdem ex errore. Apprehendo affectibus rem excogitent aut intelligat cap deveniatur cui. Rectum ita qua realem primum lus parvus. Quis iii visa suam luce pla. \cite{lol}
+Imagens podem ser adicionadas usando o package \texttt{usepackage\{graphicx\}}. Assim:
 
-Scopo ita quasi jaceo cui habeo. Quarundam ii ingressus praesenti corporeas et expendere ex gi. Duo simul visus nempe rem. Rea judiciis cognosco existens refertur ens probanda iis culpandi. Credendam eminenter contineat im productus to. Illasque tes ita compages timerent una generali. Communi id alienas du effugio. Ima atheorum imaginem singulas rem perpauca invenire rom qua. Uno imo constanter intellectu eae defectibus lus. 
+\begin{figure}[!ht] % O h significa here, t top e b bottom. O LaTeX joga a imagem onde for mais conveniente
+\centering
+	\includegraphics[width=5cm]{rubiks.png}
+	\caption{Imagem Legal}
+	\label{fig:cube}
+\end{figure}
 
-\subsection{Habeam}
+Podemos citar a Figura com Figura \ref{fig:cube}.
 
-Infixa ac de mellis at humana in. Momentis sequitur eas sua ulterius probatur cum. Quaeque poterit vim cognitu via possunt qua. Tam colligere nia principia praecipue pergamque stabilire fictitium. 
+Podemos adicionar duas Figuras lado a lado utilizando o ambiente \texttt{minipage} dentro do ambiente \texttt{figure}
 
-\subsubsection{Leone}
+\begin{figure}[!h]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+  	\centering
+    \includegraphics[width=.5\textwidth]{rubiks.png}   % Figura 1
+    \caption{Uma figura}
+  \end{minipage}
+  \begin{minipage}[b]{0.4\textwidth}
+  	\centering
+    \includegraphics[width=.5\textwidth]{logo.png}     % Figura 2
+    \caption{Outra figura}
+  \end{minipage}
+\end{figure}
 
-Lucem ii operi edita leone porro novum ab. Hae quavis hic tam essent quidam altius multis tum. 
 
-\subsection{Experirer}
+\subsection{Adicionando tabelas}
 
-Ha faciendam persuadeo tollentur ac si experirer expendere concipiam. Nudam istis cui majus vapor verba omnes usu vox eos. Falso cum scire porro edita firma istae ita hac. Bitavi si quorum figura eo ei. Hoc sitas inter rerum jam sua tum. Extitisse tot opiniones ens spectatum vos nonnullae. Longe ii ha utens fidam is primo magna ad.
+Para adicionar utilizaremos o ambiente \texttt{table}. Observe a Tabela \ref{tab:tabela}.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c|c|c}   % Tabela com três elementos de largura centralizado. Utilize l para left e r para right
+% Utilize as 'rules' para traços na tabela
+\toprule
+Potência   &    Número  & Primos menores que número  \\  \midrule
+1  &    10      &   4                        \\
+2  &	100 	&   25 	                     \\
+3  &	1,000   &	168 	                 \\
+4  &	10,000  &	1,229 	                 \\
+5  &	100,000 &	9,592 	                 \\
+6  &	1,000,000   & 	78,498 	             \\
+7  &	10,000,000  &	664,579 	         \\
+8  &	100,000,000 &	5,761,455 	         \\
+9  &    1,000,000,000  &	50,847,534 	     \\
+10 &	10,000,000,000 &	455,052,511      \\   \toprule \bottomrule
+\end{tabular}
+\caption{Distribuição de Primos $\pi(x)$} \label{tab:tabela}
+\end{table}
 
 
+\subsection{Equações}
+
+\subsubsection{Mathmode}
+
+Para utilizar o Mathmode cerque a expressão por cifrões. Por exemplo \verb!$E = mc^2$!  produzirá $E = mc^2$. Para equações mais complexas que ocupem a própria linha utilize um cifrão duplo. \verb!$$E_r = \sqrt{ (m_0 c^2)^2 + (pc)^2 }$$! produzirá:
+
+$$E_r = \sqrt{ (m_0 c^2)^2 + (pc)^2 }$$
+
+\subsection{Ambiente \texttt{Equation}}
+
+Pode-se utilizar o comando \texttt{Equation} para equações numeradas:
+
+\begin{equation} \label{equ:equação}
+\Delta t' = \gamma \, \Delta t = \frac{\Delta t}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+
+A Equação \ref{equ:equação} representa a dilatação temporal segundo a Teoria da Relatividade.
+
+\subsection{Citações}
+
+Para dar nome citável às imagens e tabelas foi utilizado o comando \verb!\label{•}!. Para citar, é utilizado \verb!\ref{•}!. Para citar bibliografia, adicione a entrada no arquivo \texttt{bibliography.bib} e utilize \verb!\cite{•}!.
+
+Essa é uma citação exemplo e fictícia a um livro \cite{SIAM}. Essa é outra citação fictícia a uma página web \cite{wiki}.
+
+Para mais informações acesse a página sobre referências em Wikibooks \cite{latex}.
 
 \newpage
-
 % Gerar bibliografia
 % É necessário a compilação PdfLatex > BibTex > PdfLatex > PdfLatex, já que o arquivo bibliography é compilado separadamente.
+\bibliographystyle{ieeetr}
 \bibliography{bibliography}
-\bibliographystyle{plain}
-
 
 
 \end{document}

@@ -6,9 +6,9 @@ Esse é um documento LaTeX básico em Português-Brasil já configurado e que j�
 
 Para utilizar LaTeX são necessários um compilador TeX/LaTeX e opcionalmente um editor de texto que facilitará na digitação.
 
-**Compilador:** [Mixtex](http://miktex.org/download)
+- [MixTex](http://miktex.org/download) - Compilador padrão para Windows.
 
-**Editor (opcional, mas recomendado):** [TexMaker](http://www.xm1math.net/texmaker/download.html)
+- [TexMaker](http://www.xm1math.net/texmaker/download.html) - Editor opcional, mas recomendado, que adiciona *autocompletion* facilitita a visualização do *project tree*.
 
 ## Configuração do TexMaker
 
@@ -25,4 +25,8 @@ Copie o dicionário incluso na pasta TexMaker para
 > `C:/Program Files (x86)/Texmaker/`
 
 e selecione como dicionário na parte Editor.
+
+## Licensa
+
+Esse documento pode ser copiado livremente sobre a licensa GNU GENERAL PUBLIC LICENSE. Contribuições ao trabalho atual são bem vindas.
  
