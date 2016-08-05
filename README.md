@@ -26,7 +26,7 @@ Copie o dicionário incluso na pasta TexMaker para
 
 e selecione como dicionário na parte Editor.
 
-## Licensa
+## Licença
 
-Esse documento pode ser copiado livremente sobre a licensa GNU GENERAL PUBLIC LICENSE. Contribuições ao trabalho atual são bem vindas.
+Esse documento pode ser copiado livremente sobre a licença GNU GENERAL PUBLIC LICENSE. Contribuições ao trabalho atual são bem vindas.
  
